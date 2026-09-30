@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
+import { formatTaskStatus } from '../utils/taskStatus'
 
 const tugas = ref([])
 const loading = ref(true)
@@ -46,7 +47,7 @@ onMounted(fetchTugas)
         <h2>{{ item.judul }}</h2>
         <p>{{ item.deskripsi }}</p>
         <strong>
-          {{ item.selesai ? 'Selesai' : 'Belum selesai' }}
+          {{ formatTaskStatus(item.selesai) }}
         </strong>
       </article>
     </div>
