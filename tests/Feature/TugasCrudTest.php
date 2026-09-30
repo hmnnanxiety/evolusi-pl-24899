@@ -20,7 +20,7 @@ class TugasCrudTest extends TestCase
         $response->assertRedirect('/tugas');
 
         $this->assertDatabaseHas('tugas', [
-            'judul' => 'Belajar CI/CD',
+            'judul' => 'INI SENGAJA DIBUAT GAGAL',
         ]);
     }
 
