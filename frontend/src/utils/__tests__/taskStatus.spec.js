@@ -7,6 +7,6 @@ describe('formatTaskStatus', () => {
   })
 
   it('menampilkan status belum selesai', () => {
-    expect(formatTaskStatus(true)).toBe('Sengaja Gagal')
+    expect(formatTaskStatus(false)).toBe('Belum selesai')
   })
 })
